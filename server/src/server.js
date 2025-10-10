@@ -7,6 +7,8 @@ import taskRoutes from '../routes/taskRoutes.js';
 import profileRoutes from '../routes/profileRoute.js';
 // loading environment variables from .env before using them
 dotenv.config();
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -20,6 +22,18 @@ app.use(cors());
 app.use('/api/auth',authRoutes);
 app.use('/api/tasks',taskRoutes);
 app.use('/api/profile', profileRoutes);
+
+
+
+//Serve React build
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, '../dist')));
+
+app.get(/^(?!\/api).+/,(req,res)=>{
+res.sendFile(path.join(__dirname,'../dist/index.html'));
+})
+
 
 app.get('/hello',(req,res)=>{
     res.json({message:"Checking"});
