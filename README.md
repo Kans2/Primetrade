@@ -81,13 +81,11 @@ npm run dev
 
 ## How to Use
 
-Register a new user or login with existing credentials.
+- Register a new user or login with existing credentials.
+- Access the dashboard to create, read, update, and delete tasks/posts.
+- Profile page allows updating user info.
+- Logout to end the session securly.
 
-Access the dashboard to create, read, update, and delete tasks/posts.
-
-Profile page allows updating user info.
-
-Logout to end the session securely.
 ---
 
 ## Live Demo
