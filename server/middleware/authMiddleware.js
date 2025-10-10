@@ -14,7 +14,7 @@ function verifyToken(req, res, next) {
             if (err) {
                 return res.status(401).json({ message: "Access Denied" });
             }
-            req.user = decoded.user;
+            req.user = decoded;
             next();
         });
     } catch (err) {
