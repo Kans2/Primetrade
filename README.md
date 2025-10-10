@@ -62,7 +62,7 @@ cd Primetrade
 
 ---
 
-##Backend Setup
+## Backend Setup
 
 cd server
 npm install
@@ -71,14 +71,14 @@ cp .env.example .env
 npm run dev
 
 ---
-##Frontend Setup
+## Frontend Setup
 
 cd frontend
 npm install
 npm start
 ---
 
-##How to Use
+## How to Use
 
 Register a new user or login with existing credentials.
 
@@ -88,7 +88,7 @@ Profile page allows updating user info.
 
 Logout to end the session securely.
 ---
-##Scaling Notes
+## Scaling Notes
 
 **Frontend:** Can be modularized further with feature-based folders and lazy-loading routes for large-scale apps.
 
@@ -98,14 +98,12 @@ Logout to end the session securely.
 
 **Authentication:** JWT can be rotated and stored in HTTP-only cookies for security in production.
 ---
-Live Demo
 
+## Live Demo
 https://primetrade-c9st.onrender.com/
 
 Author
-
 Kannan S 
-kk6046114@gmail.com | https://www.linkedin.com/in/kannan-404-s | https://portfolio-seven-chi-92.vercel.app/
 
 
 
