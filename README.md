@@ -76,7 +76,7 @@ npm run dev
 cd client
 npm install
 npm run dev
-``
+```
 ---
 
 ## How to Use
