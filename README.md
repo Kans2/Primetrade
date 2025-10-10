@@ -7,7 +7,7 @@ It demonstrates modern frontend and backend practices, including authentication,
 **Frontend:** React.js + Material UI  
 **Backend:** Node.js + Express + MongoDB  
 **Authentication:** JWT-based with password hashing (bcrypt)  
-**Deployment:** [Live Demo Link]
+**Deployment:** Render
 
 ---
 
@@ -56,10 +56,56 @@ It demonstrates modern frontend and backend practices, including authentication,
 ### Clone the repository
 ```bash
 git clone https://github.com/your-username/assignment-frontend-backend.git
-cd server
+cd Primetrade
 ```
 
 
+---
 
-git clone https://github.com/your-username/assignment-frontend-backend.git
-cd assignment-frontend-backend
+##Backend Setup
+
+cd server
+npm install
+cp .env.example .env
+# Fill in your environment variables (MongoDB URI, JWT_SECRET)
+npm run dev
+
+---
+##Frontend Setup
+
+cd frontend
+npm install
+npm start
+---
+
+##How to Use
+
+Register a new user or login with existing credentials.
+
+Access the dashboard to create, read, update, and delete tasks/posts.
+
+Profile page allows updating user info.
+
+Logout to end the session securely.
+---
+##Scaling Notes
+
+**Frontend:** Can be modularized further with feature-based folders and lazy-loading routes for large-scale apps.
+
+**Backend:** API routes are structured modularly; can add services/middleware layers for microservice architecture.
+
+**Database:** MongoDB can be replaced/scaled with clusters for high-traffic applications.
+
+**Authentication:** JWT can be rotated and stored in HTTP-only cookies for security in production.
+---
+Live Demo
+
+https://primetrade-c9st.onrender.com/
+
+Author
+
+Kannan S 
+kk6046114@gmail.com | https://www.linkedin.com/in/kannan-404-s | https://portfolio-seven-chi-92.vercel.app/
+
+
+
