@@ -63,19 +63,20 @@ cd Primetrade
 ---
 
 ## Backend Setup
-
+```bash
 cd server
 npm install
 cp .env.example .env
 # Fill in your environment variables (MongoDB URI, JWT_SECRET)
 npm run dev
-
+```
 ---
 ## Frontend Setup
-
-cd frontend
+```bash
+cd client
 npm install
-npm start
+npm run dev
+``
 ---
 
 ## How to Use
@@ -88,21 +89,11 @@ Profile page allows updating user info.
 
 Logout to end the session securely.
 ---
-## Scaling Notes
-
-**Frontend:** Can be modularized further with feature-based folders and lazy-loading routes for large-scale apps.
-
-**Backend:** API routes are structured modularly; can add services/middleware layers for microservice architecture.
-
-**Database:** MongoDB can be replaced/scaled with clusters for high-traffic applications.
-
-**Authentication:** JWT can be rotated and stored in HTTP-only cookies for security in production.
----
 
 ## Live Demo
 https://primetrade-c9st.onrender.com/
 
-Author
+## Author
 Kannan S 
 
 
