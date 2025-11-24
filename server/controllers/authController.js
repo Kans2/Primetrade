@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import User from '../models/user.model.js';
 
 // Register
-const register = ('/register', async (req, res) => {
+const register =  async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
@@ -30,10 +30,10 @@ const register = ('/register', async (req, res) => {
     } catch (err){
         return res.status(500).json({ message: "An unexpected error occurred. Please try again." });
     }
-});
+};
 
 // Login
-const login = ('/login', async (req,res)=>{
+const login =  async (req,res)=>{
   try{
 
     const { email, password } = req.body;
@@ -53,6 +53,6 @@ const login = ('/login', async (req,res)=>{
     res.json({ message: "Login successful",token});
 
   }catch(err){ res.status(500).json({ msg: err.message }); }
-});
+};
 
 export  {register, login};
