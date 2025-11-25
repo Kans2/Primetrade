@@ -1,54 +1,53 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { Layout } from "antd";
+import { GithubOutlined, LinkedinOutlined, InstagramOutlined } from "@ant-design/icons";
 
-export default function Footer() {
- const day = new Date();
+const { Footer } = Layout;
 
- let Year = day.getFullYear();
+const AppFooter = () => {
   return (
-    <div className="footer">
-      
-          <div className="one">
-            <p >©  &nbsp;{Year} Kannan s</p>
-          </div>
-          <div className="two">
-            <div className="footer-connect">
-            <ul className="footer-icons">
-            <li className="social-icons">
-             
-              <a
-                href="https://github.com/Kans2"
-                
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaGithub style={{fontSize:"1.5rem"}} />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/kannan-404-s"
-              
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin style={{fontSize:"1.5rem"}} />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/dream_is_big_life/"
-               
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaFacebook  style={{fontSize:"1.5rem"}}/>
-              </a>
-            </li>
-         
-          </ul>
-            </div>
-          </div>
-    </div>
+    <Footer
+      style={{
+        textAlign: "center",
+        padding: "20px",
+        background: "#f7f7f7",
+        marginTop: "40px",
+      }}
+    >
+      <div style={{ marginBottom: "10px" }}>
+        <a
+          href="https://www.linkedin.com/in/kannan-404-s/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ margin: "0 12px", fontSize: "22px", color: "#0077b5" }}
+        >
+          <LinkedinOutlined />
+        </a>
+
+        <a
+          href="https://github.com/Kans2"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ margin: "0 12px", fontSize: "22px", color: "#24292e" }}
+        >
+          <GithubOutlined />
+        </a>
+
+        <a
+          href="https://www.instagram.com/kans_404_err/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ margin: "0 12px", fontSize: "22px", color: "#E1306C" }}
+        >
+          <InstagramOutlined />
+        </a>
+      </div>
+
+      <p style={{ margin: 0, color: "#555" }}>
+        © {new Date().getFullYear()}  Kannan s 
+      </p>
+    </Footer>
   );
-}
+};
+
+export default AppFooter;
