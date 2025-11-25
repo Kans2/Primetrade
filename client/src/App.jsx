@@ -41,9 +41,9 @@ export default function App() {
           }
         />
         <Route path="*" element={<Welcome/>} />
-        <Footer/>
+       
       </Routes>
-      
+       <Footer/>
     </Router>
   );
 }
