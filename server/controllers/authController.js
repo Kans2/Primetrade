@@ -26,7 +26,7 @@ const register =  async (req, res) => {
 
 
 
-        res.status(200).json({ message: "User created successfully", user: { id:user._id, name: user.name, email: user.email } });
+        res.status(200).json({ message: "User created successfully", name : name} );
     } catch (err){
         return res.status(500).json({ message: "An unexpected error occurred. Please try again." });
     }
@@ -48,10 +48,9 @@ const login =  async (req,res)=>{
 
     if(!ok) return res.status(400).json({ msg: 'Invalid credentials' });
 
-    const token = jwt.sign({ id: user._id.toString() }, process.env.JWT_SECRET, { expiresIn: '7d' });
+    const token = jwt.sign({ UserID: user._id.toString() }, process.env.JWT_SECRET, { expiresIn: '7d' });
 
-    res.json({ message: "Login successful",token : token 
-    });
+    res.json({ message: "Login successful",token : token });
 
   }catch(err){ res.status(500).json({ msg: err.message }); }
 };

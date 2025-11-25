@@ -41,10 +41,10 @@ export default function Register() {
       localStorage.setItem('user', JSON.stringify(res.data.user));
       setToast({
         open: true,
-        message: 'Registration successful! Redirecting...',
+        message: 'Registration successful! please login',
         severity: 'success',
       });
-      setTimeout(() => nav('/dashboard'), 1500);
+      setTimeout(() => nav('/login'), 1500);
     } catch (err) {
       const msg = err.response?.data?.msg || 'Registration failed. Try again.';
       setToast({ open: true, message: msg, severity: 'error' });

@@ -10,7 +10,7 @@ const asyncHandler = (fn) => (req, res, next) => {
 // @access  Private
 const getTasks = asyncHandler(async (req, res) => {
     // req.user.id is set by the auth middleware
-    const userId = req.user.id;
+    const userId = req.user;
     const q = req.query.q || '';
 
     const tasks = await Task.find({ 
@@ -26,7 +26,7 @@ const getTasks = asyncHandler(async (req, res) => {
 // @desc    Create a new task
 // @access  Private
 const createTask = asyncHandler(async (req, res) => {
-    const userId = req.user.id;
+    const userId = req.user;
 
     const task = await Task.create({ 
         ...req.body, 
@@ -41,7 +41,7 @@ const createTask = asyncHandler(async (req, res) => {
 // @desc    Update a task by ID for the authenticated user
 // @access  Private
 const updateTask = asyncHandler(async (req, res) => {
-    const userId = req.user.id;
+    const userId = req.user;
     const taskId = req.params.id;
     
     // Find and update, ensuring the user owns the task
@@ -62,7 +62,7 @@ const updateTask = asyncHandler(async (req, res) => {
 // @desc    Delete a task by ID for the authenticated user
 // @access  Private
 const deleteTask = asyncHandler(async (req, res) => {
-    const userId = req.user.id;
+    const userId = req.user;
     const taskId = req.params.id;
     
     // Find and delete, ensuring the user owns the task

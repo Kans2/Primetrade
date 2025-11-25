@@ -7,14 +7,13 @@ import { getProfile, updateProfile } from '../controllers/profileController.js';
 const router = express.Router();
 
 
-// 🔒 Protect all routes below using the auth middleware
-router.use(verifyToken);
+
 
 // 📄 GET / (Fetch user details)
-router.get('/', getProfile);
+router.get('/',verifyToken, getProfile);
 
 // ✏️ PUT / (Update user info)
-router.put('/', updateProfile);
+router.put('/',verifyToken,updateProfile);
 
 
 export default router;

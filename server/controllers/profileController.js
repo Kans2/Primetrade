@@ -18,7 +18,8 @@ const asyncHandler = (fn) => (req, res, next) => {
 // @access  Private (Auth protected)
 const getProfile = asyncHandler(async (req, res) => {
     // req.user.id is populated by auth middleware
-    const user = await User.findById(req.user.id).select('-password');
+   
+    const user = await User.findById(req.user).select('-password');
     
     if (!user) {
         return res.status(404).json({ msg: 'User not found' });
@@ -44,7 +45,7 @@ const updateProfile = asyncHandler(async (req, res) => {
     }
 
     // Find and update the user by ID
-    const user = await User.findByIdAndUpdate(req.user.id, updateData, {
+    const user = await User.findByIdAndUpdate(req.user, updateData, {
         new: true, // Return the new document
     }).select('-password'); // Exclude the password from the response
 
