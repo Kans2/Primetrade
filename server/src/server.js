@@ -13,10 +13,10 @@ import { fileURLToPath } from 'url';
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-
+app.use(cors());
 app.use(express.json()); //middleware
 app.use(express.urlencoded({extended : true}));
-app.use(cors());
+
 
 
 app.use('/api/auth',authRoutes);
