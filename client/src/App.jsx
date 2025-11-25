@@ -7,6 +7,7 @@ import TasksPage from './Pages/TaskPage.jsx';
 import Profile from './Pages/Profile.jsx';
 import ProtectedRoute from './Components/ProtectedRoute.jsx';
 import Welcome from './Pages/Welcome.jsx';
+import Footer from "./Components/Footer.jsx";
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
         />
         <Route path="*" element={<Welcome/>} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
