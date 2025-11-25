@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="footer">
       
           <div className="one">
-            <p >©  &nbsp;{Year} Kannan</p>
+            <p >©  &nbsp;{Year} Kannan s</p>
           </div>
           <div className="two">
             <div className="footer-connect">
